@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('randDesign1.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    font-family: 'montserrat';
+    color: #fff2e6;
+}
+
+.clock {
+    font-size: 200px;
+    background-color: #262525;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(120, 120, 120, 0.7);
+}
+
+.ampm{
+    font-size: 80px;
+    padding: 5px;
+}
