@@ -12,14 +12,31 @@ body {
 }
 
 .clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 200px;
     background-color: #262525;
     padding: 50px;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(120, 120, 120, 0.7);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+
+
+.date{
+    vertical-align: center;
+    font-size: 50px;
+    margin-top: 450px;
+    position: relative; 
 }
 
 .ampm{
     font-size: 80px;
-    padding: 5px;
+    padding: 10px;
+    margin-top: 80px;
 }

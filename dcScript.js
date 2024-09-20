@@ -1,17 +1,22 @@
 function updateClock() {
-    const now = new Date(); // Get the current date and time
-    const hours = String(now.getHours()).padStart(2, '0'); // Get hours and format
-    const minutes = String(now.getMinutes()).padStart(2, '0'); // Get minutes and format
-    const seconds = String(now.getSeconds()).padStart(2, '0'); // Get seconds and format
+    const now = new Date(); 
+    const hours = String(now.getHours()).padStart(2, '0'); 
+    const minutes = String(now.getMinutes()).padStart(2, '0'); 
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const date = String(now.getDate()).padStart(2, '0');
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[now.getMonth()];
+    const year= String(now.getFullYear()); 
     const ampm = hours >= 12 ? 'PM' : 'AM';
 
-    // Format the time string
-    const timeString = `${hours}:${minutes}  <span class="ampm">${ampm}</span>`; //Add :${seconds} to add seconds in clock
-    // Update the clock div with the current time
+    // Format the time string and date string
+    const timeString = `${hours}:${minutes}<span class="ampm">${ampm}</span> `;
+    const dateString = `<span class="date">${date} ${month} ${year}</span>`; 
+    // Update the clock div with the current time and add time
     document.getElementById('clock').innerHTML = timeString;
+    document.getElementById('date').innerHTML = dateString;
 }
 
-// Call updateClock immediately to set the initial time
 updateClock();
-// Update the clock every second (1000 milliseconds)
+
 setInterval(updateClock, 1000);
