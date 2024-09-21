@@ -11,6 +11,65 @@ body {
     color: #fff2e6;
 }
 
+.Menu {
+    background-image: url('menuIcon.png');
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    background-size: 35px 35px;
+    background-position: center;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding: 25px;
+    background-color: #262525;
+    box-shadow: 5px 5px 15px rgba(120, 120, 120, 0.7);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}  
+
+#menu-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #menu-button:hover {
+    background-color: #444;
+  }
+  
+  #menu-contents {
+    position: absolute; /* Position the menu contents container absolutely */
+    top: 100%; /* Place it below the menu button */
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    display: none; /* Hide the menu contents by default */
+  }
+  
+  .Menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Menu li {
+    margin-bottom: 10px;
+  }
+  
+  .Menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+  
+  .Menu a:hover {
+    color: #ccc;
+  }
+
 .clock {
     position: absolute;
     top: 50%;
@@ -26,7 +85,13 @@ body {
     align-items: center;
 }
 
-
+.dClock{
+    position: absolute;
+    top: 55px;
+    right: 50px;
+    font-family: Gilgan;
+    font-size: 30px;
+}
 
 .date{
     vertical-align: center;
