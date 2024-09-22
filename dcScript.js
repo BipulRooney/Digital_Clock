@@ -20,3 +20,12 @@ function updateClock() {
 updateClock();
 
 setInterval(updateClock, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu-button');
+    const menuContents = document.getElementById('menu-contents');
+  
+    menuButton.addEventListener('click', () => {
+      menuContents.style.display = menuContents.style.display === 'block' ? 'none' : 'block';
+    });
+});

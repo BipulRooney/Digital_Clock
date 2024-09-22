@@ -20,55 +20,73 @@ body {
     position: absolute;
     top: 50px;
     left: 50px;
-    padding: 25px;
+    padding: 10px;
     background-color: #262525;
     box-shadow: 5px 5px 15px rgba(120, 120, 120, 0.7);
     display: flex; 
     justify-content: center;
     align-items: center;
+    width:35px;
+    height: 35px;
 }  
 
 #menu-button {
-    background-color: #333;
-    color: #fff;
+    background: none;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
   }
   
   #menu-button:hover {
-    background-color: #444;
+    background-color: none;
   }
   
   #menu-contents {
-    position: absolute; /* Position the menu contents container absolutely */
-    top: 100%; /* Place it below the menu button */
+    position: absolute; 
+    top: 100%; 
     left: 0;
     background-color: #333;
-    padding: 10px;
-    display: none; /* Hide the menu contents by default */
+    padding: 0;
+    display: none; 
   }
   
   .Menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
   .Menu li {
     margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .Menu a {
     text-decoration: none;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
     transition: color 0.2s ease;
   }
   
   .Menu a:hover {
     color: #ccc;
   }
+
+  /* .Menu li:last-child{
+    border-bottom: none;
+  } */
+
+.Menu a::before{
+  font-family: 'Font Awesome 5 Free';
+  content: '\f105';
+  margin-right: 10px;
+}
 
 .clock {
     position: absolute;
